@@ -1,0 +1,142 @@
+.team {
+  padding-top: 80px;
+  background-color: $bg_color_gray;
+
+  .title {
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &__first-container,
+  &__second-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 510px;
+  }
+
+  &__about {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 33px;
+
+    &:after {
+      z-index: 0;
+      position: absolute;
+      bottom: -20px;
+      left: 8px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 30px 20px 0;
+      border-color: transparent #CED3D6 transparent transparent;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 24px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 14px 34px rgba(253, 167, 85, 0.1);
+    border-radius: 7px;
+  }
+
+  &__first-container {
+    margin-right: 20px;
+  }
+
+  &__second-container {
+
+    .team__text {
+      padding-right: 12px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+    margin-bottom: 12px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__position {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__separating-line {
+    height: 34px;
+    width: 1px;
+    background-color: $separating-line_color_gray;
+    border: none;
+    margin: 0 15px 0;
+  }
+
+  &__soc {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: $text_color_dark;
+    }
+
+    &-image {
+      margin-right: 8px;
+    }
+
+    &-number {
+      font-weight: bold;
+    }
+  }
+
+  &__diploma {
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+
+    &-image {
+      margin-right: 8px;
+    }
+
+    &-link {
+      font-weight: 600;
+      color: $buttom-arrow_color_red;
+
+      &:hover,
+      &:focus,
+      &:active {
+      text-decoration: none;
+      }
+    }
+  }
+}

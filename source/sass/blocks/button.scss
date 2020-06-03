@@ -1,0 +1,108 @@
+.button-ellipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  min-width: 200px;
+  padding: 0 25px 0;
+  border-radius: 48px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &_color_white {
+    background-color: #ffffff;
+    color: $text_color_black;
+    border: 1px solid #ffffff;
+    transition: .5s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $buttom-arrow_color_red;
+    }
+  }
+
+  &_color_transparent {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transition: .5s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $buttom-arrow_color_white;
+      color: $buttom-arrow_color_red;
+    }
+  }
+
+  &_color_transparent-red {
+    color: $text_color_dark;
+    background-color: transparent;
+    border: 1px solid $buttom-arrow_color_red;
+    transition: .5s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $buttom-arrow_color_red;
+    }
+  }
+}
+
+.button__circle_transparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color .5s ;
+
+  svg {
+    fill: $buttom-arrow_color_white;
+    stroke: $buttom-arrow_color_white;
+    transition: .5s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $buttom-arrow_color_white;
+    svg {
+      fill: $buttom-arrow_color_red;
+      stroke: $buttom-arrow_color_red;
+    }
+  }
+}
+
+.button__circle_red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color .5s ;
+
+  svg {
+    fill: $buttom-arrow_color_red;
+    stroke: $buttom-arrow_color_red;
+    transition: .5s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $buttom-arrow_color_red;
+    svg {
+      fill: $buttom-arrow_color_white;
+    }
+  }
+}

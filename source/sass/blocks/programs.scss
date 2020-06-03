@@ -1,0 +1,36 @@
+.programs {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .title {
+    font-weight: 400;
+    color: $text_color_black;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    @include list;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__pointer {
+    flex-shrink: 0;
+    fill: $buttom-arrow_color_red;
+    stroke: $buttom-arrow_color_red;
+    transform: rotate(-90deg);
+    margin-right: 8px;
+  }
+}

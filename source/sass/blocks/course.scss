@@ -1,0 +1,122 @@
+.course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 480px;
+  padding: 40px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+  &__top-part,
+  &__bottom-part {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-part {
+  }
+
+  &__pre {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    max-width: 530px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__brief {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__cost {
+    display: flex;
+    margin-bottom: 24px;
+
+    &-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+  }
+
+  &__new-cost {
+    padding-right: 20px;
+    border-right: 1px solid #ffffff;
+
+    .course__price {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 41px;
+    }
+  }
+
+  &__old-cost {
+    padding-left: 20px;
+
+    .course__price {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      text-decoration-line: line-through;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    .button-ellipse {
+      margin-right: 24px;
+    }
+  }
+
+  &_ideal-body {
+    background-image: url('../img/course_ideal-body.png'), linear-gradient(106.34deg, #FF7A5C 0%, #FDA755 69.79%);
+  }
+
+  &_beautiful-buttocks {
+    background-image: url('../img/course_beautiful-buttocks.png'), linear-gradient(106.31deg, #5617BE 0%, #2774FF 70.83%);
+
+    .course__brief {
+      max-width: 450px;
+    }
+  }
+
+  &_jodhpurs {
+    background-image: url('../img/course_jodhpurs.png'), linear-gradient(106.34deg, #33B776 0%, #5BCED6 100%);
+
+    .course__brief {
+      max-width: 615px;
+    }
+  }
+
+  &_flat-stomach {
+    background-image:  url('../img/course_flat-stomach.png'), linear-gradient(106.34deg, #FDA755 0%, #FDDB61 100%);
+  }
+}

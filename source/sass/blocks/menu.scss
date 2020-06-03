@@ -1,0 +1,23 @@
+.menu {
+  width: 100%;
+
+  &__list {
+    @include list;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    line-height: 80px;
+    text-decoration: none;
+    color: $text_color_dark;
+    transition: .5s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $buttom-arrow_color_red;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.training-for-home {
+  padding-top: 80px;
+
+  .title {
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  &__brief {
+    margin-top: 0;
+    margin-bottom: 65px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 905px;
+    margin-bottom: 35px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__separating-line {
+    height: 112px;
+    width: 1px;
+    background-color: $separating-line_color_gray;
+    border: none;
+    margin: 0 15px 0;
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 64px;
+    color: $buttom-arrow_color_red;
+    margin: 0;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

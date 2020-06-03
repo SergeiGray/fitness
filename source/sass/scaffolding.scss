@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include font_Montserrat;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text_color_dark;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0;
+}
+
+.text {
+  margin: 0;
+}
