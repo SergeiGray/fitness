@@ -1,0 +1,341 @@
+.team {
+  padding-top: 80px;
+  background-color: #ffffff;
+
+  .title {
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &__first-container,
+  &__second-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 510px;
+  }
+
+  &__about {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 33px;
+
+    &:after {
+      z-index: 0;
+      position: absolute;
+      bottom: -20px;
+      left: 8px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 30px 20px 0;
+      border-color: transparent #CED3D6 transparent transparent;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 24px;
+    background: #FFFFFF;
+    box-shadow: 0px 14px 34px rgba(206, 211, 214, 0.3);
+    border-radius: 7px;
+  }
+
+  &__first-container {
+    margin-right: 20px;
+  }
+
+  &__second-container {
+
+    .team__photo {
+      width: 460px;
+      height: 465px;
+      margin-top: 25px;
+    }
+
+    .team__text {
+      padding-right: 12px;
+    }
+  }
+
+  &__photo {
+    width: 492px;
+    height: 488px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+    margin-bottom: 12px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__position {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__separating-line {
+    height: 34px;
+    width: 1px;
+    background-color: $separating-line_color_gray;
+    border: none;
+    margin: 0 15px 0;
+  }
+
+  &__diploma {
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+
+    &-image {
+      margin-right: 8px;
+    }
+
+    &-link {
+      font-weight: 600;
+      color: $buttom-arrow_color_red;
+
+      &:hover,
+      &:focus,
+      &:active {
+      text-decoration: none;
+      }
+    }
+
+    &-popup {
+      justify-content: center;
+      align-items: flex-start;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      right: 0;
+      z-index: 99;
+      max-height: 90%;
+      width: 80%;
+      padding: 0 10px 0;
+      background-color: transparent;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transition: opacity .5s;
+      overflow-y: scroll;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    &_container {
+      @include list;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &_item {
+      display: flex;
+    }
+
+    &-image {
+      width: auto;
+      height: 70vh;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .team {
+    padding: 40px 10px 40px;
+
+    &__content {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__first-container,
+    &__second-container {
+      max-width: 100%;
+    }
+
+    &__first-container {
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 6px;
+    }
+
+    &__second-container {
+
+      .team__photo {
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+      }
+    }
+
+    &__photo {
+      order: 1;
+      width: 100%;
+      height: auto;
+    }
+
+    &__row {
+      order: 2;
+      margin: 0;
+      padding: 24px 24px 0;
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+      background-color: #fff;
+    }
+
+    &__diploma {
+      order: 3;
+      margin: 0;
+      padding: 10px 24px 0;
+      background-color: #fff;
+
+      &-popup {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100%;
+        padding: 0;
+        transform: translate(0, 0);
+        overflow: hidden;
+      }
+    }
+
+    &__about {
+      order: 4;
+      width: 100%;
+      margin: 0;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      background-color: #fff;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__text {
+      padding: 17px 24px 22px;
+      background-color: transparent;
+    }
+
+    &__slider {
+      display: block;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      padding: 40px 0 0;
+      border: none;
+      box-shadow: none;
+
+      .flex-viewport {
+        padding-left: calc((100% - 280px)/2);
+        padding-right: calc((100% - 280px)/2);
+        flex-shrink: 0;
+      }
+
+      &_container {
+        width: 100% !important;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+      }
+
+      &_item {
+        position: relative;
+        z-index: 0;
+        display: flex !important;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 280px;
+        height: 390px;
+        margin: 0;
+      }
+
+      &-image {
+        width: 260px;
+        height: 360px;
+        box-shadow: 0px 0px 10px #CED3D6;
+      }
+
+      &_active {
+        position: relative;
+        z-index: 2;
+
+
+        .team__slider-image {
+          width: 280px;
+          height: 390px;
+        }
+      }
+
+      .flex-direction-nav a {
+        &.flex-next,
+        &.flex-prev {
+          background-image: url("data:image/svg+xml, %3Csvg id='icon-circle-with-arrow' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='34.5' transform='rotate(90 35 35)' stroke='%23F36C67' fill='%23F36C67'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M44.6198 33.1273C45.0278 32.7193 45.0278 32.0578 44.6198 31.6498C44.2118 31.2417 43.5502 31.2417 43.1422 31.6498L35.0158 39.7762L26.8893 31.6498C26.4813 31.2418 25.8198 31.2418 25.4118 31.6498C25.0038 32.0578 25.0038 32.7193 25.4118 33.1273L34.277 41.9925L34.277 41.9925C34.685 42.4006 35.3466 42.4006 35.7546 41.9925C35.7564 41.9907 35.7583 41.9888 35.7602 41.9869L44.6198 33.1273Z' fill='%23ffffff' stroke='none'/%3E%3C/svg%3E");
+        }
+      }
+
+      .flex-control-paging {
+        li a {
+          width: 6px;
+          height: 6px;
+          border: 1px solid #F36C67;
+          background-color: transparent;
+          pointer-events: none;
+        }
+
+        li a.flex-active {
+          width: 10px;
+          height: 10px;
+          background-color: #F36C67;
+        }
+      }
+    }
+
+    &__flipping {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      bottom: 70px;
+      left: 0;
+    }
+  }
+}

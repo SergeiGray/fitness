@@ -1,0 +1,39 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  color: $text_color_light;
+  background-image: url('../img/layer_of_hearts.png'), linear-gradient(180deg, #F36C67 0%, #FDA755 100%);
+
+  .wrapper {
+    padding-top: 280px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 130px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .landing {
+    min-height: 488px;
+    background-image: url('../img/layer_of_hearts_mobile.png'), linear-gradient(180deg, #F36C67 0%, #FDA755 100%);
+
+    .wrapper {
+      padding-top: 140px;
+    }
+
+    .title {
+      padding: 0 10px 0;
+      margin-bottom: 95px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

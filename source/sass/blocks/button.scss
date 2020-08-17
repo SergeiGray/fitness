@@ -13,6 +13,10 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   &_color_white {
     background-color: #ffffff;
     color: $text_color_black;
@@ -64,6 +68,10 @@
   background-color: transparent;
   transition: background-color .5s ;
 
+  &:focus {
+    outline: none;
+  }
+
   svg {
     fill: $buttom-arrow_color_white;
     stroke: $buttom-arrow_color_white;
@@ -73,10 +81,11 @@
   &:hover,
   &:focus,
   &:active {
+    border: 1px solid $buttom-arrow_color_red;
     background-color: $buttom-arrow_color_white;
     svg {
       fill: $buttom-arrow_color_red;
-      stroke: $buttom-arrow_color_red;
+      stroke: $buttom-arrow_color_white;
     }
   }
 }
@@ -91,6 +100,10 @@
   background-color: transparent;
   transition: background-color .5s ;
 
+  &:focus {
+    outline: none;
+  }
+
   svg {
     fill: $buttom-arrow_color_red;
     stroke: $buttom-arrow_color_red;
@@ -104,5 +117,37 @@
     svg {
       fill: $buttom-arrow_color_white;
     }
+  }
+}
+
+.button__close {
+  z-index: 101;
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.00592 8.3628L15.3121 15.9949L16.0036 15.2726L8.69757 7.64058L15.3152 0.730647L14.6235 0.00842865L8.00605 6.91822L1.38329 0L0.691772 0.722363L7.3144 7.64043L0 15.2779L0.691665 16.0002L8.00592 8.3628Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .button__close {
+    top: 15px;
+    right: 15px;
+    width: 17px;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.00592 8.3628L15.3121 15.9949L16.0036 15.2726L8.69757 7.64058L15.3152 0.730647L14.6235 0.00842865L8.00605 6.91822L1.38329 0L0.691772 0.722363L7.3144 7.64043L0 15.2779L0.691665 16.0002L8.00592 8.3628Z' fill='%23444343'/%3E%3C/svg%3E");
   }
 }

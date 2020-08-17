@@ -1,0 +1,50 @@
+.programs {
+  padding: 80px 10px 0;
+
+  .title {
+    font-weight: 400;
+    color: $text_color_black;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    @include list;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__pointer {
+    flex-shrink: 0;
+    margin-top: 3px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .programs {
+    padding: 40px 10px 40px;
+
+    .title {
+      margin-bottom: 34px;
+    }
+
+    &__list {
+      margin: 0 10px 45px 0;
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+  }
+}

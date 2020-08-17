@@ -1,0 +1,129 @@
+.guarantee {
+  padding: 80px 10px 0;
+  background-image: url('../img/layer_of_hearts.png'), linear-gradient(114.23deg, #F36C67 0%, #FDA755 100%);
+  color: $text_color_light;
+
+  .title {
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &__icon {
+    width: 290px;
+    height: 345px;
+    margin-right: 40px;
+    flex-shrink: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__main {
+
+    .guarantee__text {
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__footnote {
+    display: flex;
+
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 23px;
+    }
+
+    .guarantee__text {
+      min-height: 230px;
+      max-width: 600px;
+      margin-top: 0;
+      margin-left: -30px;
+      padding-top: 60px;
+      padding-left: 50px;
+      padding-right: 65px;
+      color: #000000;
+      font-size: 16px;
+      line-height: 24px;
+      background-image: url('../img/guarantee_bg_container.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .guarantee {
+    padding: 40px 10px 40px;
+
+    &__content {
+      margin-bottom: 0;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__main {
+      margin-bottom: 24px;
+    }
+
+    &__footnote {
+      background-color: #ffffff;
+      border-radius: 7px;
+      padding: 10px 12px;
+
+      &-icon {
+        display: none;
+      }
+
+      .guarantee__text {
+        min-height: 0;
+        min-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: $text_color_dark;
+        text-align: center;
+        background-image: none;
+
+
+
+        br {
+          display: inline;
+        }
+      }
+    }
+  }
+}

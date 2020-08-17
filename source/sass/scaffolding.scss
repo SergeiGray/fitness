@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  // outline: 1px solid red;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1060px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -24,8 +25,175 @@ body {
   line-height: 56px;
   text-align: center;
   margin: 0;
+  padding: 0 10px 0;
 }
 
 .text {
   margin: 0;
+}
+
+.signature {
+  display: flex;
+  margin-left: 25px;
+
+  &__photo {
+    width: 112px;
+    height: 112px;
+    margin-right: 15px;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__position {
+    margin: 0;
+  }
+}
+
+.flex-direction-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 71px;
+  height: 71px;
+  opacity: 1;
+  border: none;
+
+  &.flex-next,
+  &.flex-prev {
+    background-image: url("data:image/svg+xml, %3Csvg id='icon-circle-with-arrow' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='34.5' transform='rotate(90 35 35)' stroke='%23ffffff' fill='transparent'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M44.6198 33.1273C45.0278 32.7193 45.0278 32.0578 44.6198 31.6498C44.2118 31.2417 43.5502 31.2417 43.1422 31.6498L35.0158 39.7762L26.8893 31.6498C26.4813 31.2418 25.8198 31.2418 25.4118 31.6498C25.0038 32.0578 25.0038 32.7193 25.4118 33.1273L34.277 41.9925L34.277 41.9925C34.685 42.4006 35.3466 42.4006 35.7546 41.9925C35.7564 41.9907 35.7583 41.9888 35.7602 41.9869L44.6198 33.1273Z' fill='%23ffffff' stroke='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:hover,
+    &:focus {
+      background-image: url("data:image/svg+xml, %3Csvg id='icon-circle-with-arrow' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='34.5' transform='rotate(90 35 35)' stroke='%23ffffff' fill='%23ffffff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M44.6198 33.1273C45.0278 32.7193 45.0278 32.0578 44.6198 31.6498C44.2118 31.2417 43.5502 31.2417 43.1422 31.6498L35.0158 39.7762L26.8893 31.6498C26.4813 31.2418 25.8198 31.2418 25.4118 31.6498C25.0038 32.0578 25.0038 32.7193 25.4118 33.1273L34.277 41.9925L34.277 41.9925C34.685 42.4006 35.3466 42.4006 35.7546 41.9925C35.7564 41.9907 35.7583 41.9888 35.7602 41.9869L44.6198 33.1273Z' fill='%23f36c67' stroke='%23f36c67'/%3E%3C/svg%3E");
+      outline: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.flex-next {
+    right: -110px;
+    transform: rotate(-90deg);
+  }
+
+  &.flex-prev {
+    left: -110px;
+    transform: rotate(90deg);
+  }
+
+  &.flex-disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.flex-control-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-control-paging {
+  li a {
+    width: 6px;
+    height: 6px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    pointer-events: none;
+  }
+
+  li a.flex-active {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+  }
+}
+
+.display_off {
+  display: none !important;
+}
+
+.display_on  {
+  display: flex !important;
+}
+
+.overlay {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+@media (max-width: 1300px) {
+  .flex-direction-nav a {
+    top: 35px;
+
+    &.flex-next {
+      right: 20px;
+    }
+
+    &.flex-prev {
+      left: 20px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .signature {
+
+    &__photo {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__name,
+    &__position {
+      font-size: 14px;
+    }
+  }
+
+  .flex-direction-nav a {
+    width: 40px;
+    height: 40px;
+    top: 35px;
+
+    &.flex-next {
+      right: 20px;
+    }
+
+    &.flex-prev {
+      left: 20px;
+    }
+  }
 }

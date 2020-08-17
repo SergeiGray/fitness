@@ -1,0 +1,148 @@
+.footer {
+  padding: 80px 10px 0;
+
+  .wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    min-height: 180px;
+
+    &:first-child {
+      margin-right: 157px;
+    }
+  }
+
+  &__legal {
+    margin: 0;
+    margin-bottom: 15px;
+    line-height: 20px;
+  }
+
+  &__copyright {
+    margin-top: 0;
+    margin-bottom: 37px;
+  }
+
+  &__pay {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__list {
+    @include list;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    color: $text_color_dark;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__soc {
+    display: none;
+    align-items: center;
+
+    &-title {
+      margin: 0;
+      margin-right: 30px;
+    }
+
+    &-links {
+      display: flex;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .footer {
+    padding: 40px 10px 40px;
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    &__container {
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__copyright {
+      margin-bottom: 10px;
+    }
+
+    &__pay {
+      width: 100%;
+      justify-content: space-between;
+
+      &-image {
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+
+      img[src*=icon_master_card] {
+        width: 32px;
+        height: 25px;
+      }
+
+      img[src*=icon_visa] {
+        width: 39px;
+        height: 13px;
+      }
+
+      img[src*=icon_paypal] {
+        width: 71px;
+        height: 18px;
+      }
+
+      img[src*=icon_tinkoff_bank] {
+        width: 96px;
+        height: 30px;
+      }
+    }
+
+    &__soc {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &-title {
+        margin-bottom: 13px;
+      }
+    }
+  }
+}
